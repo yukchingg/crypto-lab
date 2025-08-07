@@ -5,13 +5,14 @@ export const CoinContext = createContext();
 const CoinContextProvider = (props) => {
   const [allCoin, setAllCoin] = useState([]);
   const [currency, setCurrency] = useState({ name: "aud", symbol: "A$" });
+  const apiKey = import.meta.env.VITE_CG_API_KEY;
 
   const fetchAllCoin = async () => {
     const options = {
       method: "GET",
       headers: {
         accept: "application/json",
-        "x-cg-demo-api-key": "CG-kKf9cjsHwAJ6bcPv8nEovFCE",
+        "x-cg-demo-api-key": apiKey,
       },
     };
 

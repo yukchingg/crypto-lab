@@ -45,7 +45,7 @@ const Coin = () => {
         options
       );
       const data = await res.json();
-      setCoinData(data);
+      setHistoricalData(data);
     } catch (err) {
       console.error("Failed to fetch coin data:", err);
     }
